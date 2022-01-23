@@ -20,6 +20,10 @@ public class FirstController {
 		return "hello";
 	}
 	
-	
+	@PostMapping("/myname")
+    public String msg(@RequestParam(value = "user") String name, @RequestParam(value = "last") String lName) {
+            return "post method " + name +" "+ lName;
+    }
+
 	
 }
