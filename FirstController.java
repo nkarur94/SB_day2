@@ -30,5 +30,15 @@ public class FirstController {
             return name;
     } 
 
+	@PostMapping("/json")
+     public String msg(@RequestBody User user) {
+             return user.getFirstName() +" "+ user.getLastName();
+             }
+
+	@PostMapping("/uc5/{fName}")
+	public String display(@PathVariable String fName, @RequestParam(value = "lName") String lastName) {
+		return "user name is "+ fName +" "+lastName;
+	}
+
 	
 }
