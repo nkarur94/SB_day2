@@ -25,5 +25,10 @@ public class FirstController {
             return "post method " + name +" "+ lName;
     }
 
+	@PostMapping("/path/{name}")
+    public String path(@PathVariable String name) {
+            return name;
+    } 
+
 	
 }
